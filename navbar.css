@@ -1,0 +1,106 @@
+/* Base navbar styling */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px; /* Start with navbar collapsed */
+  height: 100%; /* Full height of the page */
+  position: fixed; /* Positioning relative to the viewport */
+  z-index: 1; /* Ensures the navbar stays on top of other content */
+  top: 0; /* Align to the top of the page */
+  left: 0; /* Align to the left of the page */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  transition: 0.5s; /* Smooth transition for expanding and collapsing */
+  white-space: nowrap; /* Prevent wrapping of navbar content */
+  border-radius: 10px; /* Makes the border corners round */
+}
+
+/* Styles for when the navbar is expanded */
+.navbar:hover {
+  width: 500px; /* Width of the expanded navbar */
+}
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.navbar a {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Navbar content styling */
+.navbar-content {
+  display: none; /* Hide content by default */
+  flex-direction: column; /* Stack the links vertically */
+  align-items: center; /* Center-align the content */
+  height: 100%; /* Full height */
+  padding-top: 60px; /* Spacing from the top */
+}
+
+/* Show content when navbar is hovered */
+.navbar:hover .navbar-content {
+  display: flex; /* Re-display content when navbar is expanded */
+}
+
+/* Navbar links styling */
+.navbar-content a {
+  display: block;
+  margin-bottom: 50px;
+  padding: 8px 8px 8px 32px; /* Padding inside the links */
+  text-decoration: none; /* No underline on links */
+  font-size: 17px; /* Size of the link text */
+  color: white; /* Color of the link text */
+  transition: 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Change the color of links on hover */
+.navbar-content a:hover {
+  padding-left: 10px;
+  color: whitesmoke; /* Light color for hovered links */
+  border-radius: 10px;
+}
+
+/* Span to trigger the navbar expansion */
+.navbar span {
+  font-size: 30px; /* Size of the 'Navigate' text */
+  color: lightblue; /* Color of the 'Navigate' text */
+  position: absolute; /* Position the span over the navbar */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  padding: 15px 0px; /* Padding around the 'Navigate' text */
+  cursor: pointer; /* Cursor to indicate it can be interacted with */
+}
+
+/*Logo navBar style*/
+.gg-profile,
+.gg-profile::after,
+.gg-profile::before {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 100px
+}
+.gg-profile {
+    overflow: hidden;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    position: relative;
+    margin-left: 10px;
+}
+.gg-profile::after,
+.gg-profile::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 8px;
+    height: 8px
+}
+.gg-profile::after {
+    border-radius: 200px;
+    top: 11px;
+    left: 0px;
+    width: 18px;
+    height: 18px
+}
+

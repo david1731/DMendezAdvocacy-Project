@@ -1,0 +1,264 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin-left: 70px; 
+    margin-right: 30px;
+    background-image: linear-gradient(to left, #5c8abd, beige);
+    transition: background-image 0.5s ease-in-out;
+    
+    
+}
+
+h1,h2,h3{
+  color:black;
+}
+p{
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+#sign-now-button{
+  margin-left: 47px;
+}
+
+#title{
+  border-radius: 10px;
+  border: 3px solid white;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+#title h2{
+  align-content: center;
+  text-align: center;
+}
+a{
+  color: #5c8abd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a:hover{
+  color: purple;
+}
+a:active{
+  color: green;
+}
+
+label{
+  color:black;
+}
+img{
+    width: 70%;
+    border-radius: 10px; /* Makes the border corners round */
+}
+
+#data{
+    width: 600px;
+    border-radius: 10px; /* Makes the border corners round */
+}
+/*Upper content styling*/
+h1{
+    color:#5c8abd;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 10px; /* Makes the border corners round */
+}
+
+.container-headings{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.sub-container-heading {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* This centers the heading horizontally */
+  align-items: center; /* This centers the heading vertically, if needed */
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: space-evenly; 
+    border-radius: 10px; /* Makes the border corners round */
+}
+.footer {
+  position: relative;
+  left: 0%;
+  bottom: 10%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  /* Example with a 3px solid black border */
+  border: 3px solid #000;
+  border-radius: 10px; /* Makes the border corners round */
+
+}
+.footer ul{
+  list-style-type: none;
+}
+li, ol{
+  color:black;
+}
+
+.sub-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Add box shadow for subtle depth, optional */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Smooth transition for any background color change */
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 10px; /* Makes the border corners round */
+  width: 100%;
+}
+
+.header-item {
+  width: 50%; /* Makes sure there are only two buttons per row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+/*Petition Styling*/
+.petition-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100;
+  padding-bottom: 50px;
+}
+
+.petition-para{
+  width: 55%;
+  padding-right: 10px;
+}
+
+.signatures{
+  width: 45%;
+  padding-right: 10px;
+}
+.container1, .sub-container1, .header-item{
+  text-align:left;
+}
+
+.responsive-iframe {
+    width: 200%;
+    height: 600px; /* Adjust as needed */
+  border-radius: 10px; /* Makes the border corners round */
+}
+
+/* Add to CSS file */
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
+
+/* Scroll Animation */
+.revealable{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* the modal that covers the background and prevents user interactions */
+.modal {
+  display: none; /* hides the modal from view by default*/
+  position: fixed; /* keeps the modal in one place */
+  z-index: 2; /* positions the modal on top of all other elements on the screen */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+  flex-direction: column; /* these flexbox rules center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+/* box that contains all the content and images */
+.modal-content {
+  background-color: lightsteelblue; /* update the colors and font sizes as you like */
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+  display: flex; /* adds flexbox to center all items */
+  justify-content: center;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#close-modal, #theme-button, #reduce-motion{
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+#close-modal:focus, #theme-button:focus, #reduce-motion:focus{
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+
+#close-modal:hover, #theme-button:hover, #reduce-motion:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+
+#close-modal:active, #theme-button:active, #reduce-motion:active{
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}

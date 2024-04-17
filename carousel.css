@@ -1,0 +1,69 @@
+.carousel-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Add box shadow for subtle depth, optional */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Smooth transition for any background color change */
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 10px; /* Makes the border corners round */
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative; /* Ensure the carousel has a defined position */
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex; /* Maintains flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Ensures text is centered */
+  flex-direction: column; /* Stacks items vertically */
+  height: 500px; /* Example fixed height; adjust this value based on your content */
+  overflow: auto; /* Adds scroll to items if content exceeds the item's height */
+}
+
+.carousel-item:not(.active) {
+  display: none;
+}
+
+.carousel-indicators {
+  position: absolute; /* Position the indicators container absolutely within the carousel */
+  bottom: 10px; /* Position at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  text-align: center;
+}
+
+.carousel-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: #5c8abd;
+}
+
+img {
+  max-width: 75%; /* Ensures the image is responsive and fits within its container */
+  height: auto; /* Maintains the image's aspect ratio */
+}
+

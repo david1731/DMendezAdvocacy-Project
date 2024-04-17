@@ -1,0 +1,10 @@
+/* Customize Dark Mode Theme */
+body{
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+.dark-mode {
+    background-color:black;
+    color: white;
+}
+
+
